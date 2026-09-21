@@ -1,3 +1,5 @@
 checkpoints/
 *.tmp
 Thumbs.db
+.vercel
+.env*

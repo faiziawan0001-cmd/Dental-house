@@ -693,7 +693,7 @@ p {
 
 /* ——— PAGE HERO (inner pages) ——— */
 .page-hero {
-  background: linear-gradient(135deg, var(--gray-900) 0%, #0f3d38 50%, var(--teal-dark) 100%);
+  background: linear-gradient(135deg, rgba(17, 24, 39, 0.88) 0%, rgba(15, 61, 56, 0.85) 50%, rgba(15, 118, 110, 0.88) 100%), url('assets/House.jfif') center/cover no-repeat;
   padding: 160px 0 90px;
   position: relative;
   overflow: hidden;
@@ -1364,7 +1364,7 @@ p {
 }
 
 .page-hero-about {
-  background: linear-gradient(135deg, var(--gray-900) 0%, #0f3d38 50%, var(--teal-dark) 100%);
+  background: linear-gradient(135deg, rgba(17, 24, 39, 0.88) 0%, rgba(15, 61, 56, 0.85) 50%, rgba(15, 118, 110, 0.88) 100%), url('assets/House.jfif') center/cover no-repeat;
   padding: 160px 0 80px;
   text-align: center;
   position: relative;
