@@ -43,6 +43,7 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
+  overflow-x: hidden;
 }
 
 body {
@@ -1332,35 +1333,59 @@ p {
   .container {
     padding: 0 16px;
   }
+
+  .nav-inner {
+    gap: 12px;
+  }
+  .nav-logo {
+    min-width: 0;
+  }
+  .nav-logo-text {
+    font-size: 1.2rem;
+    white-space: nowrap;
+  }
+  .nav-logo-sub {
+    display: none;
+  }
 }
 
 /* =============================================
    ABOUT US PAGE — CALIFORNIA DENTAL INSPIRED (ORIGINAL TEAL BRANDING)
    ============================================= */
 
-/* Centered Pill Tag in Hero */
-.hero-pill-tag {
+/* Centered Eyebrow Pill Tag in Hero (California Dental Style) */
+.hero-pill-tag,
+.hero-eyebrow-pill {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  background: rgba(255, 255, 255, 0.12);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  color: rgba(255, 255, 255, 0.95);
-  padding: 6px 18px;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  color: #ffffff;
+  padding: 8px 22px;
   border-radius: 50px;
-  font-size: 0.76rem;
+  font-size: 0.78rem;
   font-weight: 700;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.11em;
   text-transform: uppercase;
-  margin-bottom: 20px;
-  backdrop-filter: blur(8px);
+  margin-bottom: 24px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform var(--transition), border-color var(--transition), background var(--transition);
 }
 
-.hero-pill-tag .dot {
-  width: 6px;
-  height: 6px;
-  background: var(--teal-light);
-  border-radius: 50%;
+.hero-pill-tag:hover,
+.hero-eyebrow-pill:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.7);
+  transform: translateY(-2px);
+}
+
+.hero-pill-tag i,
+.hero-eyebrow-pill i {
+  font-size: 0.9rem;
+  color: #ffffff;
 }
 
 .page-hero-about {
