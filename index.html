@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dental House Lahore — Best Dentist in Johar Town | Dr. Umar Liaqat</title>
+  <meta name="description" content="Dental House in Johar Town, Lahore offers painless, professional dental care. Led by Dr. Umar Liaqat. 5-star rated clinic. Book your appointment today." />
+  <meta name="keywords" content="best dentist Lahore, dentist Johar Town, dental clinic Lahore, root canal Lahore, dental implants Lahore, Dr. Umar Liaqat" />
+  <meta property="og:title" content="Dental House Lahore — Best Dentist in Johar Town" />
+  <meta property="og:description" content="Painless, professional dental care in Lahore. 5.0★ rated. Book now." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    /* ——— HOMEPAGE-SPECIFIC STYLES ——— */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background: var(--gray-900);
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('hero_bg_1789844515133.png');
+      background-size: cover;
+      background-position: center;
+      opacity: .18;
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg,
+        rgba(11,20,30,.92) 0%,
+        rgba(13,148,136,.45) 60%,
+        rgba(15,118,110,.6) 100%);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 720px;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,.12);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,255,255,.2);
+      color: #fff;
+      padding: 8px 18px;
+      border-radius: 50px;
+      font-size: .82rem;
+      font-weight: 600;
+      margin-bottom: 28px;
+      letter-spacing: .04em;
+    }
+    .hero-badge .dot {
+      width: 8px; height: 8px;
+      background: #10b981;
+      border-radius: 50%;
+      animation: pulse 1.5s infinite;
+    }
+    .hero h1 {
+      color: #fff;
+      margin-bottom: 20px;
+      font-size: clamp(2.4rem, 5.5vw, 4rem);
+    }
+    .hero h1 span { color: var(--teal-light); }
+    .hero .hero-sub {
+      color: rgba(255,255,255,.8);
+      font-size: 1.15rem;
+      max-width: 540px;
+      margin-bottom: 36px;
+      line-height: 1.7;
+    }
+    .hero-btns {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 56px;
+    }
+    .hero-trust {
+      display: flex;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+    .hero-trust-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: rgba(255,255,255,.85);
+      font-size: .9rem;
+    }
+    .hero-trust-item i { color: var(--teal-light); font-size: 1.1rem; }
+
+    /* floating card */
+    .hero-float {
+      position: absolute;
+      right: 60px; top: 50%;
+      transform: translateY(-50%);
+      z-index: 3;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .hero-stat-card {
+      background: rgba(255,255,255,.95);
+      backdrop-filter: blur(12px);
+      border-radius: 16px;
+      padding: 20px 24px;
+      min-width: 200px;
+      box-shadow: 0 20px 60px rgba(0,0,0,.25);
+      animation: float 4s ease-in-out infinite;
+    }
+    .hero-stat-card:nth-child(2) { animation-delay: .8s; }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50%       { transform: translateY(-10px); }
+    }
+    .hero-stat-card .card-label { font-size: .78rem; font-weight: 600; color: var(--gray-400); letter-spacing: .06em; text-transform: uppercase; margin-bottom: 6px; }
+    .hero-stat-card .card-value { font-size: 1.7rem; font-weight: 800; color: var(--gray-900); line-height: 1; font-family: 'Playfair Display', serif; }
+    .hero-stat-card .card-stars { color: var(--gold); font-size: .95rem; margin-top: 4px; }
+    .hero-stat-card .card-sub { font-size: .8rem; color: var(--gray-500); margin-top: 4px; }
+    .scroll-cue {
+      position: absolute;
+      bottom: 36px; left: 50%;
+      transform: translateX(-50%);
+      z-index: 3;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      color: rgba(255,255,255,.5);
+      font-size: .75rem;
+      letter-spacing: .1em;
+    }
+    .scroll-cue-line {
+      width: 2px; height: 40px;
+      background: linear-gradient(to bottom, rgba(255,255,255,.5), transparent);
+      animation: scrollLine 1.8s infinite;
+    }
+    @keyframes scrollLine {
+      0%   { height: 0; opacity: 1; }
+      100% { height: 40px; opacity: 0; }
+    }
+
+    /* intro section */
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .intro-img-wrap {
+      position: relative;
+    }
+    .intro-img-wrap img {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg);
+    }
+    .intro-badge-float {
+      position: absolute;
+      bottom: -20px; right: -20px;
+      background: var(--teal);
+      color: #fff;
+      border-radius: 16px;
+      padding: 20px 24px;
+      box-shadow: var(--shadow-teal);
+      text-align: center;
+      min-width: 130px;
+    }
+    .intro-badge-float .num { font-size: 2rem; font-weight: 800; display: block; font-family: 'Playfair Display', serif; }
+    .intro-badge-float .txt { font-size: .78rem; opacity: .9; }
+    .intro-features { display: flex; flex-direction: column; gap: 16px; margin: 28px 0 36px; }
+    .intro-feature {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+    .intro-feature-icon {
+      width: 42px; height: 42px;
+      border-radius: 10px;
+      background: var(--teal-bg);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--teal);
+      font-size: 1rem;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .intro-feature h4 { margin-bottom: 3px; }
+    .intro-feature p { font-size: .88rem; margin: 0; }
+
+    /* service preview cards */
+    .service-prev-card {
+      background: #fff;
+      border-radius: var(--radius);
+      padding: 32px 28px;
+      border: 1px solid var(--gray-100);
+      box-shadow: var(--shadow-sm);
+      transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+      display: flex;
+      flex-direction: column;
+    }
+    .service-prev-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 50px rgba(13,148,136,.12);
+      border-color: var(--teal-pale);
+    }
+    .service-prev-card .service-icon { margin-bottom: 18px; }
+    .service-prev-card h4 { margin-bottom: 8px; font-size: 1.05rem; }
+    .service-prev-card p { font-size: .88rem; flex: 1; }
+    .service-prev-card .card-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--teal);
+      font-size: .85rem;
+      font-weight: 600;
+      margin-top: 18px;
+      transition: gap var(--transition);
+    }
+    .service-prev-card:hover .card-link { gap: 10px; }
+
+    /* quick-link section cards */
+    .quick-card {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      height: 320px;
+      display: flex;
+      align-items: flex-end;
+      cursor: pointer;
+    }
+    .quick-card img {
+      position: absolute;
+      inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform .5s ease;
+    }
+    .quick-card:hover img { transform: scale(1.06); }
+    .quick-card-overlay {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      padding: 28px;
+      background: linear-gradient(to top, rgba(0,0,0,.75) 0%, transparent 100%);
+    }
+    .quick-card-overlay h3 { color: #fff; margin-bottom: 6px; }
+    .quick-card-overlay p { color: rgba(255,255,255,.8); font-size: .88rem; margin: 0; }
+
+    @media (max-width: 1024px) {
+      .hero-float { display: none; }
+    }
+    @media (max-width: 768px) {
+      .intro-grid { grid-template-columns: 1fr; gap: 48px; }
+      .intro-badge-float { bottom: -10px; right: 16px; }
+    }
+  </style>
+</head>
+<body class="page-transition">
+
+  <!-- =================== HEADER =================== -->
+  <header class="site-header transparent" id="site-header" data-transparent="true">
+    <div class="container">
+      <nav class="nav-inner">
+        <a href="index.html" class="nav-logo" id="nav-logo">
+          <div class="nav-logo-icon"><i class="fa-solid fa-tooth"></i></div>
+          <div>
+            <div class="nav-logo-text">Dental <span>House</span></div>
+            <span class="nav-logo-sub">Dr. Umar Liaqat · Lahore</span>
+          </div>
+        </a>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="work.html">Work</a></li>
+          <li><a href="office.html">Office</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+        </ul>
+        <div class="nav-right">
+          <a href="https://wa.me/923454114240" target="_blank" class="nav-cta"><i class="fa-brands fa-whatsapp"></i> Book Now</a>
+        </div>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="services.html">Services</a>
+    <a href="work.html">Work</a>
+    <a href="office.html">Office</a>
+    <a href="testimonials.html">Testimonials</a>
+    <a href="https://wa.me/923454114240" target="_blank" class="nav-cta">Book Now on WhatsApp</a>
+  </div>
+
+  <!-- =================== HERO =================== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="container" style="position:relative;z-index:2;">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="dot"></span>
+          Now Accepting New Patients
+        </div>
+        <h1>Painless, <span>Professional</span><br>Dental Care in Lahore</h1>
+        <p class="hero-sub">
+          At Dental House, we combine cutting-edge technology with compassionate care to give you the smile you deserve — comfortably and confidently.
+        </p>
+        <div class="hero-btns">
+          <a href="https://wa.me/923454114240" target="_blank" class="btn btn-primary" id="hero-book-btn">
+            <i class="fa-brands fa-whatsapp"></i> Book an Appointment
+          </a>
+          <a href="services.html" class="btn btn-outline" style="color:#fff;border-color:rgba(255,255,255,.5);" id="hero-services-btn">
+            Our Services <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+        <div class="hero-trust">
+          <div class="hero-trust-item">
+            <i class="fa-solid fa-star"></i>
+            <span>5.0★ on Google (145+ reviews)</span>
+          </div>
+          <div class="hero-trust-item">
+            <i class="fa-solid fa-shield-heart"></i>
+            <span>Painless Treatment Guaranteed</span>
+          </div>
+          <div class="hero-trust-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>Johar Town, Lahore</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Floating stat cards -->
+    <div class="hero-float">
+      <div class="hero-stat-card">
+        <div class="card-label">Google Rating</div>
+        <div class="card-value">5.0</div>
+        <div class="card-stars">★★★★★</div>
+        <div class="card-sub">145+ verified reviews</div>
+      </div>
+      <div class="hero-stat-card">
+        <div class="card-label">Happy Patients</div>
+        <div class="card-value">1,500+</div>
+        <div class="card-sub">Smiles transformed</div>
+      </div>
+    </div>
+
+    <div class="scroll-cue">
+      <div class="scroll-cue-line"></div>
+      SCROLL
+    </div>
+  </section>
+
+  <!-- =================== STATS STRIP =================== -->
+  <div class="stats-strip">
+    <div class="container">
+      <div class="stats-grid stagger">
+        <div class="stat-item fade-in">
+          <div class="number" data-count="5.0" data-decimals="1" data-suffix="★">5.0★</div>
+          <div class="stars">★★★★★</div>
+          <div class="label">Google Rating</div>
+        </div>
+        <div class="stat-item fade-in">
+          <div class="number" data-count="145" data-suffix="+">145+</div>
+          <div class="label">Verified Reviews</div>
+        </div>
+        <div class="stat-item fade-in">
+          <div class="number" data-count="1500" data-suffix="+">1500+</div>
+          <div class="label">Patients Treated</div>
+        </div>
+        <div class="stat-item fade-in">
+          <div class="number" data-count="8" data-suffix="+ Yrs">8+ Yrs</div>
+          <div class="label">Of Experience</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =================== INTRO SECTION =================== -->
+  <section class="section" id="intro">
+    <div class="container">
+      <div class="intro-grid">
+        <div class="intro-img-wrap fade-in-left">
+          <img src="clinic_interior_1789844557545.png" alt="Dental House Clinic Interior — Modern, clean, well-equipped" />
+          <div class="intro-badge-float">
+            <span class="num">5★</span>
+            <span class="txt">Rated Clinic</span>
+          </div>
+        </div>
+        <div class="fade-in-right">
+          <span class="section-label">Welcome to Dental House</span>
+          <h2 class="section-title">Your Smile Is Our Priority</h2>
+          <p style="margin-bottom:16px;">
+            Dental House is Lahore's premier dental clinic, located in the heart of Johar Town. Under the expert leadership of Dr. Umar Liaqat, we offer a complete spectrum of dental and cosmetic services in a state-of-the-art, hygienic environment.
+          </p>
+          <p>
+            Whether you're visiting for a routine cleaning or a complex implant procedure, our team is committed to making your experience comfortable, painless, and exceptional.
+          </p>
+          <div class="intro-features">
+            <div class="intro-feature">
+              <div class="intro-feature-icon"><i class="fa-solid fa-syringe"></i></div>
+              <div>
+                <h4>Painless Procedures</h4>
+                <p>Advanced anesthesia and gentle techniques make every visit comfortable.</p>
+              </div>
+            </div>
+            <div class="intro-feature">
+              <div class="intro-feature-icon"><i class="fa-solid fa-microscope"></i></div>
+              <div>
+                <h4>Modern Technology</h4>
+                <p>Digital X-rays, sterilization units, and the latest dental equipment.</p>
+              </div>
+            </div>
+            <div class="intro-feature">
+              <div class="intro-feature-icon"><i class="fa-solid fa-clock"></i></div>
+              <div>
+                <h4>Extended Hours</h4>
+                <p>Open Mon–Sat until 11:30 PM so we fit your schedule, not the other way.</p>
+              </div>
+            </div>
+          </div>
+          <div style="display:flex;gap:16px;flex-wrap:wrap;">
+            <a href="about.html" class="btn btn-primary" id="intro-about-btn">
+              Our Story <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a href="tel:+923454114240" class="btn btn-outline" id="intro-call-btn">
+              <i class="fa-solid fa-phone"></i> Call Us
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== SERVICES PREVIEW =================== -->
+  <section class="section section-alt" id="services-preview">
+    <div class="container">
+      <div class="text-center fade-in">
+        <span class="section-label">What We Offer</span>
+        <h2 class="section-title">Comprehensive Dental Services</h2>
+        <p class="section-subtitle">From preventive care to complex restorations, we cover every aspect of your dental health under one roof.</p>
+      </div>
+      <div class="grid-3 stagger" style="margin-bottom:48px;">
+        <div class="service-prev-card fade-in">
+          <div class="service-icon"><i class="fa-solid fa-tooth" style="color:var(--teal);"></i></div>
+          <h4>Root Canal Treatment</h4>
+          <p>Relieve pain and save your natural tooth with our precise, comfortable RCT procedures.</p>
+          <a href="services.html#rct" class="card-link">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="service-prev-card fade-in">
+          <div class="service-icon"><i class="fa-solid fa-circle-plus" style="color:var(--teal);"></i></div>
+          <h4>Dental Implants</h4>
+          <p>Permanent, natural-looking tooth replacements that restore your confidence and chewing function.</p>
+          <a href="services.html#implants" class="card-link">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="service-prev-card fade-in">
+          <div class="service-icon"><i class="fa-solid fa-sparkles" style="color:var(--teal);"></i></div>
+          <h4>Cosmetic Dentistry</h4>
+          <p>Veneers, whitening, and smile makeovers crafted to give you a picture-perfect smile.</p>
+          <a href="services.html#cosmetic" class="card-link">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="service-prev-card fade-in">
+          <div class="service-icon"><i class="fa-solid fa-shield-virus" style="color:var(--teal);"></i></div>
+          <h4>Teeth Cleaning & Polishing</h4>
+          <p>Professional scaling and polishing to maintain a fresh, plaque-free, healthy smile.</p>
+          <a href="services.html#cleaning" class="card-link">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="service-prev-card fade-in">
+          <div class="service-icon"><i class="fa-solid fa-stethoscope" style="color:var(--teal);"></i></div>
+          <h4>General Dentistry</h4>
+          <p>Fillings, extractions, crowns, and complete oral health care for the whole family.</p>
+          <a href="services.html#general" class="card-link">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="service-prev-card fade-in">
+          <div class="service-icon"><i class="fa-solid fa-face-smile" style="color:var(--teal);"></i></div>
+          <h4>Skin & Hair Care</h4>
+          <p>Complementary aesthetic treatments for a complete beauty and wellness experience.</p>
+          <a href="services.html#skin" class="card-link">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="text-center fade-in">
+        <a href="services.html" class="btn btn-primary" id="home-all-services-btn">View All Services <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== QUICK LINKS (Work / Office / Testimonials) =================== -->
+  <section class="section" id="quick-links">
+    <div class="container">
+      <div class="text-center fade-in">
+        <span class="section-label">Explore More</span>
+        <h2 class="section-title">See Our Work &amp; Clinic</h2>
+        <p class="section-subtitle">Browse real case results, tour our facility, and read what patients say about us.</p>
+      </div>
+      <div class="grid-3 stagger">
+        <a href="work.html" class="quick-card fade-in" id="qlink-work">
+          <img src="smile_makeover_1789844572495.png" alt="Dental work portfolio — Smile makeovers and implant cases" />
+          <div class="quick-card-overlay">
+            <h3>Our Work</h3>
+            <p>Browse smile makeovers, implant cases & more</p>
+          </div>
+        </a>
+        <a href="office.html" class="quick-card fade-in" id="qlink-office">
+          <img src="clinic_interior_1789844557545.png" alt="Dental House Clinic — Modern interior and equipment" />
+          <div class="quick-card-overlay">
+            <h3>Our Office</h3>
+            <p>Tour our modern, hygienic clinic in Johar Town</p>
+          </div>
+        </a>
+        <a href="testimonials.html" class="quick-card fade-in" id="qlink-testimonials">
+          <img src="hero_bg_1789844515133.png" alt="Patient testimonials at Dental House Lahore" />
+          <div class="quick-card-overlay">
+            <h3>Testimonials</h3>
+            <p>What our 5★ patients say about their care</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== DR UMAR SNAPSHOT =================== -->
+  <section class="section section-teal" id="dr-snapshot">
+    <div class="container">
+      <div class="intro-grid" style="gap:60px;align-items:center;">
+        <div class="fade-in-left">
+          <span class="section-label">Meet Your Dentist</span>
+          <h2 class="section-title">Dr. Umar Liaqat</h2>
+          <p style="margin-bottom:16px;">
+            Dr. Umar Liaqat is the founder and lead dentist at Dental House. With years of specialized training and thousands of successful cases, he is known across Lahore for his patient-first approach and painless techniques.
+          </p>
+          <p style="margin-bottom:28px;">
+            His philosophy is simple: every patient deserves the highest standard of care, delivered with kindness, precision, and transparency.
+          </p>
+          <div style="display:flex;gap:16px;flex-wrap:wrap;">
+            <a href="about.html" class="btn btn-primary" id="home-about-dr-btn">Meet Dr. Umar <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="https://wa.me/923454114240" target="_blank" class="btn btn-outline" id="home-wa-btn">
+              <i class="fa-brands fa-whatsapp"></i> WhatsApp
+            </a>
+          </div>
+        </div>
+        <div class="fade-in-right" style="position:relative;">
+          <img src="assets/dr umar.jfif" alt="Dr. Umar Liaqat — Lead Dentist at Dental House Lahore" style="border-radius:var(--radius-lg);box-shadow:var(--shadow-lg);width:100%;height:480px;object-fit:cover;" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== CONTACT STRIP =================== -->
+  <section class="contact-strip" id="contact-strip">
+    <div class="container">
+      <div class="contact-strip-inner">
+        <div>
+          <h2 style="font-size:clamp(1.6rem,3vw,2.2rem);">Ready to Book Your Appointment?</h2>
+          <p>Open Mon–Sat 11 AM–11:30 PM · Sunday 7 PM–11 PM · Johar Town, Lahore</p>
+        </div>
+        <div class="contact-strip-btns">
+          <a href="https://wa.me/923454114240" target="_blank" class="btn btn-whatsapp" id="strip-wa-btn">
+            <i class="fa-brands fa-whatsapp"></i> WhatsApp Us
+          </a>
+          <a href="tel:+923454114240" class="btn btn-white" id="strip-call-btn">
+            <i class="fa-solid fa-phone"></i> +92 345 4114240
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== FOOTER =================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <div class="nav-logo-icon"><i class="fa-solid fa-tooth"></i></div>
+            <div>
+              <div class="nav-logo-text">Dental <span>House</span></div>
+              <span class="nav-logo-sub">Dr. Umar Liaqat · Lahore</span>
+            </div>
+          </a>
+          <p>Painless, professional dental care in the heart of Johar Town, Lahore. Your smile is our highest priority.</p>
+          <div class="footer-social">
+            <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://wa.me/923454114240" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Dental Services</a></li>
+            <li><a href="work.html">Case Portfolio</a></li>
+            <li><a href="office.html">Our Location</a></li>
+            <li><a href="testimonials.html">Patient Reviews</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services.html">Dental Implants</a></li>
+            <li><a href="services.html">Smile Makeovers</a></li>
+            <li><a href="services.html">Root Canal Treatment</a></li>
+            <li><a href="services.html">Teeth Cleaning</a></li>
+            <li><a href="services.html">Cosmetic Dentistry</a></li>
+            <li><a href="services.html">Teeth Whitening</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Clinic Hours</h4>
+          <div class="footer-hours-row"><span>Mon - Sat:</span> <span>11:00 AM - 11:30 PM</span></div>
+          <div class="footer-hours-row"><span>Sunday:</span> <span>7:00 PM - 11:00 PM</span></div>
+
+          <div style="margin-top: 24px;">
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-location-dot icon"></i>
+              <span>1st Floor, Bilal Arcade, Opp. The International School of Choueifat, Block G-1, Johar Town, Lahore 54000</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-phone icon"></i>
+              <span>+92 345 4114240</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom footer-bottom-split">
+        <div>© 2026 Dental House. All Rights Reserved.</div>
+        <p class="footer-credit"><span class="dot"></span> Built by <a href="https://fazi-awan-portfolio.vercel.app/" target="_blank" rel="noopener">Fazi Awan <i class="fa-solid fa-arrow-up-right-from-square"></i></a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="shared.js"></script>
+</body>
+</html>

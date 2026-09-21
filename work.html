@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Work — Dental Case Highlights & Smile Transformations | Dental House Lahore</title>
+  <meta name="description" content="Browse Dental House's portfolio of smile makeovers, implant cases, RCT recoveries, and cosmetic dentistry results. Real treatments, real smiles, Lahore." />
+  <meta name="keywords" content="dental work Lahore, smile makeover Lahore, dental implant results, before after dental, cosmetic dentistry portfolio" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    .work-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 24px;
+    }
+    .work-placeholder {
+      width: 100%; height: 260px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: 3.5rem;
+      background: linear-gradient(135deg, var(--teal-bg), var(--teal-pale));
+      color: var(--teal);
+      transition: transform .5s ease;
+    }
+    .work-placeholder span {
+      font-size: .75rem;
+      font-weight: 600;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--teal-dark);
+      margin-top: 10px;
+    }
+
+    .work-card-styled {
+      background: #fff;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--gray-100);
+      transition: transform var(--transition), box-shadow var(--transition);
+      cursor: pointer;
+    }
+    .work-card-styled:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-lg);
+    }
+    .work-card-styled:hover .work-placeholder { transform: scale(1.04); }
+
+    .work-card-info { padding: 20px; }
+    .work-card-info .work-tag { margin-bottom: 8px; }
+    .work-card-info h4 { margin-bottom: 6px; font-size: 1rem; }
+    .work-card-info p { font-size: .83rem; margin: 0; }
+
+    .case-highlight {
+      background: linear-gradient(135deg, var(--gray-900), #0f3d38);
+      border-radius: var(--radius-lg);
+      padding: 60px;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+    .case-highlight::before {
+      content: '"';
+      font-family: Georgia, serif;
+      font-size: 18rem;
+      color: rgba(255,255,255,.04);
+      position: absolute;
+      top: -60px; left: 30px;
+      line-height: 1;
+    }
+    .case-highlight-grid {
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: 60px;
+      align-items: center;
+    }
+    .case-highlight h3 { color: #fff; font-size: 1.6rem; margin-bottom: 16px; }
+    .case-highlight p { color: rgba(255,255,255,.8); margin-bottom: 12px; line-height: 1.75; }
+    .case-stats { display: flex; gap: 32px; margin-top: 28px; }
+    .case-stat .n { font-size: 2rem; font-weight: 700; font-family: 'Playfair Display', serif; color: var(--teal-light); }
+    .case-stat .l { font-size: .8rem; color: rgba(255,255,255,.6); margin-top: 3px; }
+
+    .case-highlight-card {
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.15);
+      border-radius: 16px;
+      padding: 32px;
+      text-align: center;
+    }
+    .case-highlight-card .icon { font-size: 3rem; margin-bottom: 16px; }
+    .case-highlight-card h4 { color: #fff; margin-bottom: 8px; }
+    .case-highlight-card p { color: rgba(255,255,255,.7); font-size: .85rem; margin: 0; }
+
+    @media (max-width: 768px) {
+      .case-highlight { padding: 36px 24px; }
+      .case-highlight-grid { grid-template-columns: 1fr; gap: 32px; }
+      .case-stats { gap: 24px; }
+    }
+  </style>
+</head>
+<body class="page-transition">
+
+  <!-- HEADER -->
+  <header class="site-header scrolled" id="site-header">
+    <div class="container">
+      <nav class="nav-inner">
+        <a href="index.html" class="nav-logo">
+          <div class="nav-logo-icon"><i class="fa-solid fa-tooth"></i></div>
+          <div>
+            <div class="nav-logo-text">Dental <span>House</span></div>
+            <span class="nav-logo-sub">Dr. Umar Liaqat · Lahore</span>
+          </div>
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="work.html" class="active">Work</a></li>
+          <li><a href="office.html">Office</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+          <li><a href="https://wa.me/923454114240" target="_blank" class="nav-cta">Book Now</a></li>
+        </ul>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+      </nav>
+    </div>
+  </header>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="services.html">Services</a>
+    <a href="work.html" class="active">Work</a>
+    <a href="office.html">Office</a>
+    <a href="testimonials.html">Testimonials</a>
+    <a href="https://wa.me/923454114240" target="_blank" class="nav-cta">Book Now on WhatsApp</a>
+  </div>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a> <span>›</span> Our Work</div>
+      <h1>Our Work</h1>
+      <p>A showcase of treatment case highlights, smile transformations, and the craftsmanship behind every procedure at Dental House.</p>
+    </div>
+  </section>
+
+  <!-- ——— CASE HIGHLIGHT ——— -->
+  <section class="section section-alt" style="padding:72px 0;">
+    <div class="container">
+      <div class="case-highlight fade-in">
+        <div class="case-highlight-grid">
+          <div>
+            <span class="section-label" style="background:rgba(255,255,255,.15);color:var(--teal-light);">Featured Case</span>
+            <h3>4-Implant Restoration After Cyst Removal</h3>
+            <p>One of our most complex cases involved a patient who presented with a significant cyst that had compromised multiple teeth. After careful extraction and cyst removal, Dr. Umar Liaqat placed four dental implants — restoring full chewing function and natural aesthetics.</p>
+            <p>The patient reported minimal discomfort throughout the process and a remarkably smooth recovery. Today, they enjoy a complete, natural-looking smile.</p>
+            <div class="case-stats">
+              <div class="case-stat">
+                <div class="n">4</div>
+                <div class="l">Implants Placed</div>
+              </div>
+              <div class="case-stat">
+                <div class="n">1</div>
+                <div class="l">Stage Surgery</div>
+              </div>
+              <div class="case-stat">
+                <div class="n">★★★★★</div>
+                <div class="l">Patient Rating</div>
+              </div>
+            </div>
+          </div>
+          <div class="case-highlight-card">
+            <div class="icon">🦷</div>
+            <h4>Full Arch Restoration</h4>
+            <p>Cyst removal + bone grafting + 4 implants = complete smile transformation with pain-free recovery.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ——— PORTFOLIO GRID ——— -->
+  <section class="section" id="portfolio">
+    <div class="container">
+      <div class="text-center fade-in">
+        <span class="section-label">Case Portfolio</span>
+        <h2 class="section-title">Treatment Highlights</h2>
+        <p class="section-subtitle">Explore a sample of the treatments performed at Dental House. Every case is handled with precision, care, and artistry.</p>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="filter-tabs fade-in">
+        <button class="filter-tab active" data-cat="all">All Cases</button>
+        <button class="filter-tab" data-cat="implant">Implants</button>
+        <button class="filter-tab" data-cat="rct">Root Canal</button>
+        <button class="filter-tab" data-cat="cosmetic">Cosmetic</button>
+        <button class="filter-tab" data-cat="cleaning">Cleaning</button>
+      </div>
+
+      <div class="work-grid stagger">
+
+        <div class="work-card-styled fade-in" data-cat="cosmetic">
+          <div style="overflow:hidden;">
+            <div class="work-placeholder"><i class="fa-solid fa-wand-magic-sparkles"></i><span>Smile Makeover</span></div>
+          </div>
+          <div class="work-card-info">
+            <div class="work-tag">Cosmetic</div>
+            <h4>Full Smile Makeover</h4>
+            <p>Porcelain veneers placed on upper six teeth — transforming a stained, uneven smile into a radiant, natural-looking result.</p>
+          </div>
+        </div>
+
+        <div class="work-card-styled fade-in" data-cat="implant">
+          <div style="overflow:hidden;">
+            <div class="work-placeholder" style="background:linear-gradient(135deg,#ccfbf1,#d1fae5);"><i class="fa-solid fa-circle-plus"></i><span>Implant Case</span></div>
+          </div>
+          <div class="work-card-info">
+            <div class="work-tag" style="background:#d1fae5;color:#065f46;">Implants</div>
+            <h4>Single Tooth Implant</h4>
+            <p>Seamless replacement of a missing lower molar with a titanium implant and zirconia crown — indistinguishable from natural teeth.</p>
+          </div>
+        </div>
+
+        <div class="work-card-styled fade-in" data-cat="rct">
+          <div style="overflow:hidden;">
+            <div class="work-placeholder" style="background:linear-gradient(135deg,#ede9fe,#ddd6fe);color:#7c3aed;"><i class="fa-solid fa-tooth"></i><span>RCT Recovery</span></div>
+          </div>
+          <div class="work-card-info">
+            <div class="work-tag" style="background:#ede9fe;color:#7c3aed;">Root Canal</div>
+            <h4>RCT + Crown Restoration</h4>
+            <p>Severely infected upper molar saved with painless root canal treatment, followed by a full porcelain crown restoration.</p>
+          </div>
+        </div>
+
+        <div class="work-card-styled fade-in" data-cat="implant">
+          <div style="overflow:hidden;">
+            <div class="work-placeholder" style="background:linear-gradient(135deg,#ccfbf1,#a7f3d0);"><i class="fa-solid fa-teeth"></i><span>Multiple Implants</span></div>
+          </div>
+          <div class="work-card-info">
+            <div class="work-tag" style="background:#d1fae5;color:#065f46;">Implants</div>
+            <h4>4-Implant Full Restoration</h4>
+            <p>Post-cyst removal case requiring four simultaneous implants. Pain-free procedure with exceptional healing and aesthetic outcome.</p>
+          </div>
+        </div>
+
+        <div class="work-card-styled fade-in" data-cat="cleaning">
+          <div style="overflow:hidden;">
+            <div class="work-placeholder" style="background:linear-gradient(135deg,#e0f2fe,#bae6fd);color:#0369a1;"><i class="fa-solid fa-shield-virus"></i><span>Deep Cleaning</span></div>
+          </div>
+          <div class="work-card-info">
+            <div class="work-tag" style="background:#e0f2fe;color:#0369a1;">Cleaning</div>
+            <h4>Deep Scaling & Polishing</h4>
+            <p>Full-mouth periodontal scaling for a patient with significant tartar buildup and early gum disease — complete resolution achieved.</p>
+          </div>
+        </div>
+
+        <div class="work-card-styled fade-in" data-cat="cosmetic">
+          <div style="overflow:hidden;">
+            <div class="work-placeholder" style="background:linear-gradient(135deg,#fce7f3,#fbcfe8);color:#be185d;"><i class="fa-solid fa-paintbrush"></i><span>Teeth Whitening</span></div>
+          </div>
+          <div class="work-card-info">
+            <div class="work-tag" style="background:#fce7f3;color:#be185d;">Cosmetic</div>
+            <h4>Professional Teeth Whitening</h4>
+            <p>In-office professional whitening achieving 8 shades lighter in a single session — a quick, dramatic, confidence-boosting transformation.</p>
+          </div>
+        </div>
+
+        <div class="work-card-styled fade-in" data-cat="cosmetic">
+          <div style="overflow:hidden;">
+            <div class="work-placeholder" style="background:linear-gradient(135deg,#fef3c7,#fde68a);color:#b45309;"><i class="fa-solid fa-star"></i><span>Composite Bonding</span></div>
+          </div>
+          <div class="work-card-info">
+            <div class="work-tag" style="background:#fef3c7;color:#b45309;">Cosmetic</div>
+            <h4>Composite Bonding</h4>
+            <p>Chips and gaps corrected with natural-shade composite bonding — a minimally invasive, same-day smile enhancement.</p>
+          </div>
+        </div>
+
+        <div class="work-card-styled fade-in" data-cat="rct">
+          <div style="overflow:hidden;">
+            <div class="work-placeholder" style="background:linear-gradient(135deg,#ede9fe,#c4b5fd);color:#6d28d9;"><i class="fa-solid fa-syringe"></i><span>Painless RCT</span></div>
+          </div>
+          <div class="work-card-info">
+            <div class="work-tag" style="background:#ede9fe;color:#7c3aed;">Root Canal</div>
+            <h4>Rotary Root Canal Treatment</h4>
+            <p>Lower premolar with curved canals treated using advanced rotary endodontics — patient reported zero pain, same-day recovery.</p>
+          </div>
+        </div>
+
+        <div class="work-card-styled fade-in" data-cat="implant">
+          <div style="overflow:hidden;">
+            <div class="work-placeholder" style="background:linear-gradient(135deg,#d1fae5,#a7f3d0);color:#047857;"><i class="fa-solid fa-bridge"></i><span>Bridge</span></div>
+          </div>
+          <div class="work-card-info">
+            <div class="work-tag" style="background:#d1fae5;color:#065f46;">Prosthetics</div>
+            <h4>3-Unit Zirconia Bridge</h4>
+            <p>Three-unit porcelain-fused zirconia bridge replacing a missing central tooth — natural white shade, perfect occlusion.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT STRIP -->
+  <section class="contact-strip">
+    <div class="container">
+      <div class="contact-strip-inner">
+        <div>
+          <h2 style="font-size:clamp(1.6rem,3vw,2.2rem);">Your Transformation Starts Here</h2>
+          <p>Join 1,500+ patients who've already changed their smiles at Dental House.</p>
+        </div>
+        <div class="contact-strip-btns">
+          <a href="https://wa.me/923454114240" target="_blank" class="btn btn-whatsapp" id="work-wa-btn">
+            <i class="fa-brands fa-whatsapp"></i> Book a Consultation
+          </a>
+          <a href="services.html" class="btn btn-white" id="work-services-btn">
+            View All Services <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <div class="nav-logo-icon"><i class="fa-solid fa-tooth"></i></div>
+            <div>
+              <div class="nav-logo-text">Dental <span>House</span></div>
+              <span class="nav-logo-sub">Dr. Umar Liaqat · Lahore</span>
+            </div>
+          </a>
+          <p>Painless, professional dental care in the heart of Johar Town, Lahore. Your smile is our highest priority.</p>
+          <div class="footer-social">
+            <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://wa.me/923454114240" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Dental Services</a></li>
+            <li><a href="work.html">Case Portfolio</a></li>
+            <li><a href="office.html">Our Location</a></li>
+            <li><a href="testimonials.html">Patient Reviews</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services.html">Dental Implants</a></li>
+            <li><a href="services.html">Smile Makeovers</a></li>
+            <li><a href="services.html">Root Canal Treatment</a></li>
+            <li><a href="services.html">Teeth Cleaning</a></li>
+            <li><a href="services.html">Cosmetic Dentistry</a></li>
+            <li><a href="services.html">Teeth Whitening</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Clinic Hours</h4>
+          <div class="footer-hours-row"><span>Mon - Sat:</span> <span>11:00 AM - 11:30 PM</span></div>
+          <div class="footer-hours-row"><span>Sunday:</span> <span>7:00 PM - 11:00 PM</span></div>
+
+          <div style="margin-top: 24px;">
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-location-dot icon"></i>
+              <span>1st Floor, Bilal Arcade, Opp. Choueifat School, Block G-1, Johar Town, Lahore 54000</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-phone icon"></i>
+              <span>+92 345 4114240</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom footer-bottom-split">
+        <div>© 2026 Dental House. All Rights Reserved.</div>
+        <p class="footer-credit"><span class="dot"></span> Built by <a href="https://fazi-awan-portfolio.vercel.app/" target="_blank" rel="noopener">Fazi Awan <i class="fa-solid fa-arrow-up-right-from-square"></i></a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="shared.js"></script>
+</body>
+</html>

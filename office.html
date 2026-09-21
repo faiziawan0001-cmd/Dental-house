@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Office — Dental House Clinic in Johar Town, Lahore</title>
+  <meta name="description" content="Visit Dental House in Johar Town, Lahore. Modern, hygienic clinic with state-of-the-art equipment. Get directions, view our hours, and tour our facility." />
+  <meta name="keywords" content="dental clinic Johar Town Lahore, dental house location, dentist address Lahore, Bilal Arcade Johar Town" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    .office-info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+    .info-card {
+      background: #fff;
+      border-radius: var(--radius);
+      padding: 32px;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--gray-100);
+    }
+    .info-card h4 {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+      font-size: 1rem;
+      color: var(--teal-dark);
+    }
+    .info-card h4 i { color: var(--teal); }
+
+    .amenity-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 16px;
+    }
+    .amenity-item {
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      border: 1px solid var(--gray-100);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 10px;
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+    .amenity-item:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+    }
+    .amenity-item .icon {
+      font-size: 1.8rem;
+      color: var(--teal);
+    }
+    .amenity-item span { font-size: .85rem; font-weight: 500; color: var(--gray-700); }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 240px 240px;
+      gap: 16px;
+    }
+    .gallery-item {
+      border-radius: var(--radius);
+      overflow: hidden;
+      position: relative;
+    }
+    .gallery-item:first-child { grid-row: span 2; }
+    .gallery-item img,
+    .gallery-item .placeholder {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform .5s ease;
+    }
+    .gallery-item:hover img,
+    .gallery-item:hover .placeholder { transform: scale(1.05); }
+    .gallery-item .placeholder {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+      gap: 10px;
+    }
+    .gallery-item .placeholder span {
+      font-size: .78rem;
+      font-weight: 600;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 768px) {
+      .office-info-grid { grid-template-columns: 1fr; }
+      .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+      }
+      .gallery-item:first-child { grid-row: span 1; }
+    }
+    @media (max-width: 480px) {
+      .gallery-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body class="page-transition">
+
+  <!-- HEADER -->
+  <header class="site-header scrolled" id="site-header">
+    <div class="container">
+      <nav class="nav-inner">
+        <a href="index.html" class="nav-logo">
+          <div class="nav-logo-icon"><i class="fa-solid fa-tooth"></i></div>
+          <div>
+            <div class="nav-logo-text">Dental <span>House</span></div>
+            <span class="nav-logo-sub">Dr. Umar Liaqat · Lahore</span>
+          </div>
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="work.html">Work</a></li>
+          <li><a href="office.html" class="active">Office</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+          <li><a href="https://wa.me/923454114240" target="_blank" class="nav-cta">Book Now</a></li>
+        </ul>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+      </nav>
+    </div>
+  </header>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="services.html">Services</a>
+    <a href="work.html">Work</a>
+    <a href="office.html" class="active">Office</a>
+    <a href="testimonials.html">Testimonials</a>
+    <a href="https://wa.me/923454114240" target="_blank" class="nav-cta">Book Now on WhatsApp</a>
+  </div>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a> <span>›</span> Our Office</div>
+      <h1>Our Office</h1>
+      <p>A modern, immaculate, and welcoming environment designed to make every visit a comfortable and reassuring experience.</p>
+    </div>
+  </section>
+
+  <!-- ——— GALLERY ——— -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center fade-in">
+        <span class="section-label">Clinic Gallery</span>
+        <h2 class="section-title">Step Inside Dental House</h2>
+        <p class="section-subtitle">Our clinic combines clinical excellence with a warm, welcoming atmosphere — because a comfortable patient is a healthy patient.</p>
+      </div>
+      <div class="gallery-grid fade-in">
+        <!-- Main large -->
+        <div class="gallery-item">
+          <img src="clinic_interior_1789844557545.png" alt="Dental House main clinic interior — modern dental chair and equipment" />
+        </div>
+        <!-- Top right -->
+        <div class="gallery-item">
+          <div class="placeholder" style="background:linear-gradient(135deg,#ccfbf1,#a7f3d0);color:var(--teal-dark);">
+            <i class="fa-solid fa-microscope"></i>
+            <span>Advanced Equipment</span>
+          </div>
+        </div>
+        <!-- Bottom right top -->
+        <div class="gallery-item">
+          <div class="placeholder" style="background:linear-gradient(135deg,#f0fdfa,#ccfbf1);color:var(--teal);">
+            <i class="fa-solid fa-couch"></i>
+            <span>Waiting Area</span>
+          </div>
+        </div>
+        <!-- Row 2 -->
+        <div class="gallery-item">
+          <img src="smile_makeover_1789844572495.png" alt="Dental consultation room at Dental House" />
+        </div>
+        <div class="gallery-item">
+          <div class="placeholder" style="background:linear-gradient(135deg,#e0f2fe,#bae6fd);color:#0369a1;">
+            <i class="fa-solid fa-shield-virus"></i>
+            <span>Sterilization Room</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ——— AMENITIES ——— -->
+  <section class="section section-teal" style="padding:72px 0;">
+    <div class="container">
+      <div class="text-center fade-in">
+        <span class="section-label">Clinic Features</span>
+        <h2 class="section-title">What Makes Our Clinic Special</h2>
+        <p class="section-subtitle">We invested in everything that matters — so you can focus on nothing but your health and comfort.</p>
+      </div>
+      <div class="amenity-grid stagger">
+        <div class="amenity-item fade-in">
+          <div class="icon"><i class="fa-solid fa-wifi"></i></div>
+          <span>Free Wi-Fi in Waiting Area</span>
+        </div>
+        <div class="amenity-item fade-in">
+          <div class="icon"><i class="fa-solid fa-snowflake"></i></div>
+          <span>Climate Controlled</span>
+        </div>
+        <div class="amenity-item fade-in">
+          <div class="icon"><i class="fa-solid fa-shield-virus"></i></div>
+          <span>Hospital-Grade Sterilization</span>
+        </div>
+        <div class="amenity-item fade-in">
+          <div class="icon"><i class="fa-solid fa-microscope"></i></div>
+          <span>Digital X-Ray System</span>
+        </div>
+        <div class="amenity-item fade-in">
+          <div class="icon"><i class="fa-solid fa-wheelchair-move"></i></div>
+          <span>Accessible Entrance</span>
+        </div>
+        <div class="amenity-item fade-in">
+          <div class="icon"><i class="fa-solid fa-square-parking"></i></div>
+          <span>Ample Parking Nearby</span>
+        </div>
+        <div class="amenity-item fade-in">
+          <div class="icon"><i class="fa-solid fa-droplet"></i></div>
+          <span>Purified Water System</span>
+        </div>
+        <div class="amenity-item fade-in">
+          <div class="icon"><i class="fa-solid fa-lightbulb"></i></div>
+          <span>LED Dental Lighting</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ——— INFO + MAP ——— -->
+  <section class="section" id="location">
+    <div class="container">
+      <div class="office-info-grid">
+
+        <!-- LEFT: Info cards -->
+        <div style="display:flex;flex-direction:column;gap:24px;">
+          <div class="fade-in">
+            <span class="section-label">Find Us</span>
+            <h2 class="section-title" style="margin-bottom:8px;">Visit Dental House</h2>
+            <p>Conveniently located in Johar Town, one of Lahore's most accessible neighborhoods.</p>
+          </div>
+
+          <div class="info-card fade-in">
+            <h4><i class="fa-solid fa-location-dot"></i> Address</h4>
+            <p style="line-height:1.7;margin:0;">
+              1st Floor, Bilal Arcade<br>
+              Opposite The International School of Choueifat<br>
+              Block G-1, Johar Town<br>
+              Lahore, 54000, Pakistan
+            </p>
+          </div>
+
+          <div class="info-card fade-in">
+            <h4><i class="fa-solid fa-clock"></i> Clinic Hours</h4>
+            <table class="hours-table">
+              <tr><td>Monday</td><td>11:00 AM – 11:30 PM</td></tr>
+              <tr><td>Tuesday</td><td>11:00 AM – 11:30 PM</td></tr>
+              <tr><td>Wednesday</td><td>11:00 AM – 11:30 PM</td></tr>
+              <tr><td>Thursday</td><td>11:00 AM – 11:30 PM</td></tr>
+              <tr><td>Friday</td><td>11:00 AM – 11:30 PM</td></tr>
+              <tr><td>Saturday</td><td>11:00 AM – 11:30 PM</td></tr>
+              <tr><td>Sunday</td><td>7:00 PM – 11:00 PM</td></tr>
+            </table>
+            <div style="margin-top:16px;"><span class="open-badge">Open Now</span></div>
+          </div>
+
+          <div class="info-card fade-in">
+            <h4><i class="fa-solid fa-phone"></i> Contact</h4>
+            <div style="display:flex;flex-direction:column;gap:12px;">
+              <a href="tel:+923454114240" style="display:flex;align-items:center;gap:10px;color:var(--gray-700);font-size:.95rem;font-weight:500;">
+                <i class="fa-solid fa-phone" style="color:var(--teal);"></i> +92 345 4114240
+              </a>
+              <a href="https://wa.me/923454114240" target="_blank" class="btn btn-whatsapp" style="padding:10px 20px;" id="office-wa-btn">
+                <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+              </a>
+            </div>
+          </div>
+
+          <a href="https://www.google.com/maps/dir/?api=1&destination=31.4734692,74.2795868" target="_blank" class="btn btn-primary" style="align-self:start;" id="office-directions-btn">
+            <i class="fa-solid fa-map-location-dot"></i> Get Directions on Google Maps
+          </a>
+        </div>
+
+        <!-- RIGHT: Map -->
+        <div class="fade-in-right">
+          <div class="map-wrapper" style="height:600px;border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-lg);">
+            <iframe
+              title="Dental House Location — Johar Town, Lahore"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3402.9!2d74.2795868!3d31.4734692!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzHCsDI4JzI0LjUiTiA3NMKwMTYnNDYuNiJF!5e0!3m2!1sen!2spk!4v1695000000000!5m2!1sen!2spk"
+              width="100%"
+              height="100%"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ——— AMBIENCE DESCRIPTION ——— -->
+  <section class="section section-alt" style="padding:72px 0;">
+    <div class="container">
+      <div class="text-center fade-in">
+        <span class="section-label">The Dental House Experience</span>
+        <h2 class="section-title">A Clinic That Feels Different</h2>
+      </div>
+      <div class="grid-3 stagger" style="margin-top:16px;">
+        <div class="card fade-in" style="padding:32px;">
+          <div class="service-icon" style="background:var(--teal-bg);"><i class="fa-solid fa-heart" style="color:var(--teal);"></i></div>
+          <h4>Welcoming Atmosphere</h4>
+          <p>From the moment you walk in, our warm staff and calm environment put even the most anxious patients at ease.</p>
+        </div>
+        <div class="card fade-in" style="padding:32px;">
+          <div class="service-icon" style="background:var(--teal-bg);"><i class="fa-solid fa-sparkles" style="color:var(--teal);"></i></div>
+          <h4>Spotlessly Clean</h4>
+          <p>Our clinic follows the highest standards of cleanliness and sterilization — you'll notice the difference the moment you arrive.</p>
+        </div>
+        <div class="card fade-in" style="padding:32px;">
+          <div class="service-icon" style="background:var(--teal-bg);"><i class="fa-solid fa-bolt" style="color:var(--teal);"></i></div>
+          <h4>State-of-the-Art</h4>
+          <p>Modern dental chairs, digital imaging, and the latest instruments ensure precise, efficient, and comfortable care.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT STRIP -->
+  <section class="contact-strip">
+    <div class="container">
+      <div class="contact-strip-inner">
+        <div>
+          <h2 style="font-size:clamp(1.6rem,3vw,2.2rem);">Ready to Visit Us?</h2>
+          <p>We're open 7 days a week. Book your appointment today.</p>
+        </div>
+        <div class="contact-strip-btns">
+          <a href="https://wa.me/923454114240" target="_blank" class="btn btn-whatsapp" id="office-strip-wa">
+            <i class="fa-brands fa-whatsapp"></i> Book via WhatsApp
+          </a>
+          <a href="https://www.google.com/maps/dir/?api=1&destination=31.4734692,74.2795868" target="_blank" class="btn btn-white" id="office-strip-directions">
+            <i class="fa-solid fa-map-location-dot"></i> Get Directions
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <div class="nav-logo-icon"><i class="fa-solid fa-tooth"></i></div>
+            <div>
+              <div class="nav-logo-text">Dental <span>House</span></div>
+              <span class="nav-logo-sub">Dr. Umar Liaqat · Lahore</span>
+            </div>
+          </a>
+          <p>Painless, professional dental care in the heart of Johar Town, Lahore. Your smile is our highest priority.</p>
+          <div class="footer-social">
+            <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://wa.me/923454114240" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Dental Services</a></li>
+            <li><a href="work.html">Case Portfolio</a></li>
+            <li><a href="office.html">Our Location</a></li>
+            <li><a href="testimonials.html">Patient Reviews</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services.html">Dental Implants</a></li>
+            <li><a href="services.html">Smile Makeovers</a></li>
+            <li><a href="services.html">Root Canal Treatment</a></li>
+            <li><a href="services.html">Teeth Cleaning</a></li>
+            <li><a href="services.html">Cosmetic Dentistry</a></li>
+            <li><a href="services.html">Teeth Whitening</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Clinic Hours</h4>
+          <div class="footer-hours-row"><span>Mon - Sat:</span> <span>11:00 AM - 11:30 PM</span></div>
+          <div class="footer-hours-row"><span>Sunday:</span> <span>7:00 PM - 11:00 PM</span></div>
+
+          <div style="margin-top: 24px;">
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-location-dot icon"></i>
+              <span>1st Floor, Bilal Arcade, Opp. Choueifat School, Block G-1, Johar Town, Lahore 54000</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-phone icon"></i>
+              <span>+92 345 4114240</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom footer-bottom-split">
+        <div>© 2026 Dental House. All Rights Reserved.</div>
+        <p class="footer-credit"><span class="dot"></span> Built by <a href="https://fazi-awan-portfolio.vercel.app/" target="_blank" rel="noopener">Fazi Awan <i class="fa-solid fa-arrow-up-right-from-square"></i></a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="shared.js"></script>
+</body>
+</html>

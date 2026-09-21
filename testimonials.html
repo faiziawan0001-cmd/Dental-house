@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Patient Reviews — Dental House Lahore | 5-Star Dentist in Johar Town</title>
+  <meta name="description" content="Read real patient reviews for Dental House and Dr. Umar Liaqat. 5.0★ rating on Google with 145+ verified reviews. Painless RCT, implants, and world-class care in Lahore." />
+  <meta name="keywords" content="dental house reviews, Dr. Umar Liaqat reviews, best dentist Lahore reviews, 5 star dental clinic Lahore" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    .rating-hero {
+      background: linear-gradient(135deg, var(--gray-900), #0f3d38);
+      padding: 72px 0;
+    }
+    .rating-hero-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 48px;
+      flex-wrap: wrap;
+    }
+    .big-rating {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+    .big-rating .score {
+      font-size: 6rem;
+      font-weight: 800;
+      color: #fff;
+      font-family: 'Playfair Display', serif;
+      line-height: 1;
+    }
+    .big-rating .details .stars { font-size: 1.8rem; color: var(--gold); letter-spacing: 4px; }
+    .big-rating .details .count { color: rgba(255,255,255,.7); font-size: 1rem; margin-top: 6px; }
+    .rating-bars { flex: 1; min-width: 240px; }
+    .rating-bar-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+    .rating-bar-row .label { color: rgba(255,255,255,.8); font-size: .82rem; width: 32px; text-align: right; flex-shrink: 0; }
+    .rating-bar-row .bar-track {
+      flex: 1;
+      height: 8px;
+      background: rgba(255,255,255,.1);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .rating-bar-row .bar-fill {
+      height: 100%;
+      background: var(--gold);
+      border-radius: 4px;
+      transition: width 1.5s ease;
+    }
+    .rating-bar-row .count { color: rgba(255,255,255,.5); font-size: .78rem; width: 30px; }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+      gap: 24px;
+    }
+
+    .review-summary-card {
+      background: var(--teal);
+      border-radius: var(--radius-lg);
+      padding: 48px;
+      text-align: center;
+      color: #fff;
+      margin-top: 64px;
+    }
+    .review-summary-card h3 { color: #fff; margin-bottom: 12px; }
+    .review-summary-card p { color: rgba(255,255,255,.85); margin-bottom: 28px; max-width: 480px; margin-left: auto; margin-right: auto; }
+    .review-summary-card .btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+    @media (max-width: 600px) {
+      .big-rating { flex-direction: column; gap: 16px; }
+      .big-rating .score { font-size: 4rem; }
+    }
+  </style>
+</head>
+<body class="page-transition">
+
+  <!-- HEADER -->
+  <header class="site-header scrolled" id="site-header">
+    <div class="container">
+      <nav class="nav-inner">
+        <a href="index.html" class="nav-logo">
+          <div class="nav-logo-icon"><i class="fa-solid fa-tooth"></i></div>
+          <div>
+            <div class="nav-logo-text">Dental <span>House</span></div>
+            <span class="nav-logo-sub">Dr. Umar Liaqat · Lahore</span>
+          </div>
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="work.html">Work</a></li>
+          <li><a href="office.html">Office</a></li>
+          <li><a href="testimonials.html" class="active">Testimonials</a></li>
+          <li><a href="https://wa.me/923454114240" target="_blank" class="nav-cta">Book Now</a></li>
+        </ul>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+      </nav>
+    </div>
+  </header>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="services.html">Services</a>
+    <a href="work.html">Work</a>
+    <a href="office.html">Office</a>
+    <a href="testimonials.html" class="active">Testimonials</a>
+    <a href="https://wa.me/923454114240" target="_blank" class="nav-cta">Book Now on WhatsApp</a>
+  </div>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a> <span>›</span> Testimonials</div>
+      <h1>What Patients Say</h1>
+      <p>Real experiences from real patients. 145+ verified Google reviews and a perfect 5.0 star rating.</p>
+    </div>
+  </section>
+
+  <!-- ——— RATING HERO STRIP ——— -->
+  <section class="rating-hero">
+    <div class="container">
+      <div class="rating-hero-inner">
+        <div class="big-rating fade-in-left">
+          <div class="score" data-count="5.0" data-decimals="1">5.0</div>
+          <div class="details">
+            <div class="stars">★★★★★</div>
+            <div class="count">145+ Google Reviews</div>
+            <div style="margin-top:16px;">
+              <a href="https://www.google.com/maps/search/Dental+House+Johar+Town+Lahore" target="_blank" class="btn btn-primary" style="padding:10px 22px;font-size:.85rem;" id="google-reviews-btn">
+                <i class="fa-brands fa-google"></i> Read on Google
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="rating-bars fade-in-right">
+          <div class="rating-bar-row">
+            <span class="label">5★</span>
+            <div class="bar-track"><div class="bar-fill" style="width:96%;"></div></div>
+            <span class="count">139</span>
+          </div>
+          <div class="rating-bar-row">
+            <span class="label">4★</span>
+            <div class="bar-track"><div class="bar-fill" style="width:4%;"></div></div>
+            <span class="count">6</span>
+          </div>
+          <div class="rating-bar-row">
+            <span class="label">3★</span>
+            <div class="bar-track"><div class="bar-fill" style="width:0%;"></div></div>
+            <span class="count">0</span>
+          </div>
+          <div class="rating-bar-row">
+            <span class="label">2★</span>
+            <div class="bar-track"><div class="bar-fill" style="width:0%;"></div></div>
+            <span class="count">0</span>
+          </div>
+          <div class="rating-bar-row">
+            <span class="label">1★</span>
+            <div class="bar-track"><div class="bar-fill" style="width:0%;"></div></div>
+            <span class="count">0</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ——— TESTIMONIALS GRID ——— -->
+  <section class="section" id="reviews">
+    <div class="container">
+      <div class="text-center fade-in">
+        <span class="section-label">Patient Reviews</span>
+        <h2 class="section-title">Voices from Our Patients</h2>
+        <p class="section-subtitle">These are paraphrased from real experiences shared by patients of Dental House on Google.</p>
+      </div>
+
+      <div class="testimonials-grid stagger">
+
+        <div class="testimonial-card fade-in">
+          <div class="quote-mark">"</div>
+          <div class="stars" style="font-size:.9rem;margin-bottom:12px;">★★★★★</div>
+          <p>Dr. Umar performed my root canal and I was genuinely shocked — I felt almost nothing. I had been terrified for months, but the experience was so smooth and painless that I wish I had come sooner. The clinic is spotless and the team is incredibly professional.</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">AK</div>
+            <div>
+              <div class="testimonial-name">Ahmed Karimi</div>
+              <div class="testimonial-role">Root Canal Patient · Google Review</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card fade-in">
+          <div class="quote-mark">"</div>
+          <div class="stars" style="font-size:.9rem;margin-bottom:12px;">★★★★★</div>
+          <p>I came in for dental implants after losing three teeth. Dr. Umar explained everything in detail before starting. The surgery went extremely well — I was expecting a long, painful recovery but I was back to my routine within a few days. Truly remarkable care.</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">SR</div>
+            <div>
+              <div class="testimonial-name">Sana Raza</div>
+              <div class="testimonial-role">Implant Patient · Google Review</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card fade-in">
+          <div class="quote-mark">"</div>
+          <div class="stars" style="font-size:.9rem;margin-bottom:12px;">★★★★★</div>
+          <p>I had a cyst that required extraction and four implants. A procedure that sounds terrifying was made completely manageable by Dr. Umar's expertise and calm demeanor. My recovery was pain-free and the results are beautiful. I cannot recommend this clinic enough.</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">FM</div>
+            <div>
+              <div class="testimonial-name">Fahad Mahmood</div>
+              <div class="testimonial-role">4-Implant Restoration · Google Review</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card fade-in">
+          <div class="quote-mark">"</div>
+          <div class="stars" style="font-size:.9rem;margin-bottom:12px;">★★★★★</div>
+          <p>The clinic is modern, clean, and well-equipped — you can tell they care about hygiene. Dr. Umar is patient, kind, and genuinely listens to your concerns. I came for a cleaning and ended up booking a full smile makeover. Best dental decision I've made!</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">ZN</div>
+            <div>
+              <div class="testimonial-name">Zainab Noor</div>
+              <div class="testimonial-role">Cleaning & Cosmetic · Google Review</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card fade-in">
+          <div class="quote-mark">"</div>
+          <div class="stars" style="font-size:.9rem;margin-bottom:12px;">★★★★★</div>
+          <p>I've had bad experiences with dentists before — painful procedures, dismissive doctors. Dr. Umar was the complete opposite. He took time to explain everything, made me feel at ease, and the RCT was genuinely painless. This is what dental care should feel like.</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">HA</div>
+            <div>
+              <div class="testimonial-name">Hassan Ali</div>
+              <div class="testimonial-role">Root Canal Patient · Google Review</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card fade-in">
+          <div class="quote-mark">"</div>
+          <div class="stars" style="font-size:.9rem;margin-bottom:12px;">★★★★★</div>
+          <p>My whole family has switched to Dental House. Dr. Umar treats everyone from my elderly parents to my kids with the same level of patience and care. The extended hours are a lifesaver for our busy schedules. Absolutely the best dental clinic in Johar Town.</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">MB</div>
+            <div>
+              <div class="testimonial-name">Maria Baig</div>
+              <div class="testimonial-role">Family Patient · Google Review</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card fade-in">
+          <div class="quote-mark">"</div>
+          <div class="stars" style="font-size:.9rem;margin-bottom:12px;">★★★★★</div>
+          <p>I came for professional teeth whitening and the results exceeded my expectations — multiple shades whiter in a single session. The procedure was comfortable and the team was friendly throughout. I've already recommended Dental House to all my friends.</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">RK</div>
+            <div>
+              <div class="testimonial-name">Rida Khan</div>
+              <div class="testimonial-role">Whitening Patient · Google Review</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card fade-in">
+          <div class="quote-mark">"</div>
+          <div class="stars" style="font-size:.9rem;margin-bottom:12px;">★★★★★</div>
+          <p>What truly stands out about Dr. Umar is his professionalism combined with his genuine care for patients. He doesn't rush, he explains, and he follows up. The equipment is top-of-the-line and the clinic always smells fresh and clean. A true gem in Lahore.</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">OT</div>
+            <div>
+              <div class="testimonial-name">Omar Tariq</div>
+              <div class="testimonial-role">Regular Patient · Google Review</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card fade-in">
+          <div class="quote-mark">"</div>
+          <div class="stars" style="font-size:.9rem;margin-bottom:12px;">★★★★★</div>
+          <p>I was nervous about getting veneers — worried they'd look fake. Dr. Umar showed me different shade options, explained the process step by step, and the final result is incredibly natural. My confidence has completely transformed. Worth every rupee.</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">NS</div>
+            <div>
+              <div class="testimonial-name">Nadia Shah</div>
+              <div class="testimonial-role">Veneer Patient · Google Review</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Summary + CTA Card -->
+      <div class="review-summary-card fade-in">
+        <h3>Join 145+ Satisfied Patients</h3>
+        <p>Experience why Dental House is rated 5.0 stars across Google. Book your appointment today and discover the difference of truly patient-centered dental care.</p>
+        <div class="btns">
+          <a href="https://www.google.com/maps/search/Dental+House+Johar+Town+Lahore" target="_blank" class="btn btn-white" id="testi-google-btn">
+            <i class="fa-brands fa-google"></i> Read More on Google
+          </a>
+          <a href="https://wa.me/923454114240" target="_blank" class="btn btn-whatsapp" id="testi-book-btn">
+            <i class="fa-brands fa-whatsapp"></i> Book Your Visit
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT STRIP -->
+  <section class="contact-strip" style="background:linear-gradient(135deg,var(--gray-900),#0f3d38);">
+    <div class="container">
+      <div class="contact-strip-inner">
+        <div>
+          <h2 style="font-size:clamp(1.6rem,3vw,2.2rem);">Your 5-Star Experience Awaits</h2>
+          <p>Don't just take our patients' word for it — come experience Dental House yourself.</p>
+        </div>
+        <div class="contact-strip-btns">
+          <a href="https://wa.me/923454114240" target="_blank" class="btn btn-whatsapp" id="testi-strip-wa">
+            <i class="fa-brands fa-whatsapp"></i> Book Now
+          </a>
+          <a href="tel:+923454114240" class="btn btn-white" id="testi-strip-call">
+            <i class="fa-solid fa-phone"></i> +92 345 4114240
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <div class="nav-logo-icon"><i class="fa-solid fa-tooth"></i></div>
+            <div>
+              <div class="nav-logo-text">Dental <span>House</span></div>
+              <span class="nav-logo-sub">Dr. Umar Liaqat · Lahore</span>
+            </div>
+          </a>
+          <p>Painless, professional dental care in the heart of Johar Town, Lahore. Your smile is our highest priority.</p>
+          <div class="footer-social">
+            <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://wa.me/923454114240" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Dental Services</a></li>
+            <li><a href="work.html">Case Portfolio</a></li>
+            <li><a href="office.html">Our Location</a></li>
+            <li><a href="testimonials.html">Patient Reviews</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services.html">Dental Implants</a></li>
+            <li><a href="services.html">Smile Makeovers</a></li>
+            <li><a href="services.html">Root Canal Treatment</a></li>
+            <li><a href="services.html">Teeth Cleaning</a></li>
+            <li><a href="services.html">Cosmetic Dentistry</a></li>
+            <li><a href="services.html">Teeth Whitening</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Clinic Hours</h4>
+          <div class="footer-hours-row"><span>Mon - Sat:</span> <span>11:00 AM - 11:30 PM</span></div>
+          <div class="footer-hours-row"><span>Sunday:</span> <span>7:00 PM - 11:00 PM</span></div>
+
+          <div style="margin-top: 24px;">
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-location-dot icon"></i>
+              <span>1st Floor, Bilal Arcade, Opp. Choueifat School, Block G-1, Johar Town, Lahore 54000</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-phone icon"></i>
+              <span>+92 345 4114240</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom footer-bottom-split">
+        <div>© 2026 Dental House. All Rights Reserved.</div>
+        <p class="footer-credit"><span class="dot"></span> Built by <a href="https://fazi-awan-portfolio.vercel.app/" target="_blank" rel="noopener">Fazi Awan <i class="fa-solid fa-arrow-up-right-from-square"></i></a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="shared.js"></script>
+</body>
+</html>

@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Dental House — Dr. Umar Liaqat, Dentist in Johar Town Lahore</title>
+  <meta name="description" content="Learn about Dental House and Dr. Umar Liaqat, Lahore's trusted dentist in Johar Town. Our mission: painless, compassionate, and professional dental care." />
+  <meta name="keywords" content="Dr. Umar Liaqat dentist Lahore, about Dental House, Johar Town dentist, best dental clinic Lahore" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    /* About-specific styles */
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 28px;
+    }
+    .value-card {
+      background: #fff;
+      border-radius: var(--radius);
+      padding: 32px 28px;
+      border-top: 4px solid var(--teal);
+      box-shadow: var(--shadow-sm);
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+    .value-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+    }
+    .value-card .value-icon {
+      width: 54px; height: 54px;
+      background: var(--teal-bg);
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem;
+      color: var(--teal);
+      margin-bottom: 18px;
+    }
+    .value-card h4 { margin-bottom: 8px; }
+    .value-card p { font-size: .88rem; margin: 0; }
+
+    .team-card {
+      background: #fff;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--gray-100);
+      text-align: center;
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+    .team-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+    }
+    .team-card-img {
+      height: 260px;
+      background: linear-gradient(135deg, var(--teal-bg), var(--teal-pale));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 5rem;
+      color: var(--teal);
+    }
+    .team-card-body { padding: 24px; }
+    .team-card-body h4 { margin-bottom: 4px; }
+    .team-card-body .role { color: var(--teal); font-size: .85rem; font-weight: 600; margin-bottom: 10px; }
+    .team-card-body p { font-size: .85rem; margin: 0; }
+
+    .timeline { position: relative; padding-left: 40px; }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 14px; top: 0; bottom: 0;
+      width: 2px;
+      background: var(--teal-pale);
+    }
+    .timeline-item {
+      position: relative;
+      margin-bottom: 36px;
+    }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -32px; top: 6px;
+      width: 14px; height: 14px;
+      background: var(--teal);
+      border-radius: 50%;
+      border: 3px solid #fff;
+      box-shadow: 0 0 0 3px var(--teal-pale);
+    }
+    .timeline-item .year {
+      font-size: .8rem;
+      font-weight: 700;
+      color: var(--teal);
+      letter-spacing: .06em;
+      margin-bottom: 4px;
+    }
+    .timeline-item h4 { margin-bottom: 4px; }
+    .timeline-item p { font-size: .88rem; margin: 0; }
+
+    .about-intro-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    @media (max-width: 768px) {
+      .about-intro-grid { grid-template-columns: 1fr; gap: 48px; }
+    }
+  </style>
+</head>
+<body class="page-transition">
+
+  <!-- HEADER -->
+  <header class="site-header scrolled" id="site-header">
+    <div class="container">
+      <nav class="nav-inner">
+        <a href="index.html" class="nav-logo">
+          <div class="nav-logo-icon"><i class="fa-solid fa-tooth"></i></div>
+          <div>
+            <div class="nav-logo-text">Dental <span>House</span></div>
+            <span class="nav-logo-sub">Dr. Umar Liaqat · Lahore</span>
+          </div>
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="active">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="work.html">Work</a></li>
+          <li><a href="office.html">Office</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+        </ul>
+        <div class="nav-right">
+          <a href="https://wa.me/923454114240" target="_blank" class="nav-cta"><i class="fa-brands fa-whatsapp"></i> Book Now</a>
+        </div>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      </nav>
+    </div>
+  </header>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="about.html" class="active">About Us</a>
+    <a href="services.html">Services</a>
+    <a href="work.html">Work</a>
+    <a href="office.html">Office</a>
+    <a href="testimonials.html">Testimonials</a>
+    <a href="https://wa.me/923454114240" target="_blank" class="nav-cta">Book Now on WhatsApp</a>
+  </div>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a> <span>›</span> About Us</div>
+      <h1>Meet Our Doctor & Team</h1>
+      <p>Over 8+ years of gentle, thorough, and compassionate dental care for your whole family.</p>
+    </div>
+  </section>
+
+  <!-- ——— 1ST SECTION: ABOUT DR. UMAR LIAQAT ——— -->
+  <section class="section" id="dr-profile" style="background:#f8fafc; padding: 70px 0;">
+    <div class="container">
+      <div class="dr-about-grid">
+        <!-- Left Doctor Card -->
+        <div class="dr-profile-card fade-in-left">
+          <div class="dr-avatar-wrapper">
+            <img src="assets/dr umar.jfif" alt="Dr. Umar Liaqat — Lead Dentist Dental House Lahore" />
+          </div>
+          <h3>Dr. Umar Liaqat</h3>
+          <div class="dr-degree">Doctor of Dental Surgery (BDS, RDS)</div>
+          <div class="dr-badges-flex">
+            <span class="dr-badge"><i class="fa-solid fa-graduation-cap"></i> BDS Graduate</span>
+            <span class="dr-badge"><i class="fa-solid fa-clock"></i> 8+ Yrs Exp</span>
+            <span class="dr-badge"><i class="fa-solid fa-id-card"></i> PMDC Registered</span>
+            <span class="dr-badge"><i class="fa-solid fa-language"></i> Urdu & English Fluent</span>
+            <span class="dr-badge"><i class="fa-solid fa-star"></i> 5.0★ Google Rated</span>
+          </div>
+        </div>
+
+        <!-- Right Bio Card -->
+        <div class="dr-bio-card fade-in-right">
+          <h2>About Dr. Umar Liaqat</h2>
+          <p>
+            Dr. Liaqat has over 8 years of clinical experience and is committed to providing the absolute best in quality, thorough, and gentle dental care for every patient. He treats his patients like family and is exceptionally skilled in working with children, nervous patients, and complex procedures.
+          </p>
+          <p>
+            Dr. Liaqat finished his Bachelor of Dental Surgery (BDS) degree with high honors from a prestigious dental institution in Pakistan. He has since completed advanced specialized training in dental implants, endodontics (painless root canal treatment), and cosmetic smile makeovers. During his career, he has taken great pride in treating thousands of patients with care and precision.
+          </p>
+
+          <h3 class="dr-assoc-heading">Professional Associations & Advanced Training</h3>
+          <div class="dr-assoc-grid">
+            <div class="dr-assoc-item">
+              <i class="fa-solid fa-certificate"></i>
+              <span>PMDC Registered Dental Surgeon</span>
+            </div>
+            <div class="dr-assoc-item">
+              <i class="fa-solid fa-tooth"></i>
+              <span>Advanced Endodontic Specialist (RCT)</span>
+            </div>
+            <div class="dr-assoc-item">
+              <i class="fa-solid fa-award"></i>
+              <span>Member of Pakistan Dental Association</span>
+            </div>
+            <div class="dr-assoc-item">
+              <i class="fa-solid fa-sparkles"></i>
+              <span>Certified Implantologist & Smile Designer</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ——— 2ND SECTION: OUR TEAM ——— -->
+  <section class="section" id="team" style="padding: 80px 0;">
+    <div class="container">
+      <div class="text-center fade-in">
+        <span class="section-label">Our Team</span>
+        <h2 class="section-title">The People Behind Your Smile</h2>
+        <p class="section-subtitle">A dedicated team of professionals working together to deliver exceptional dental experiences.</p>
+      </div>
+      <div class="grid-4 stagger">
+        <div class="team-card fade-in">
+          <div class="team-card-img" style="background:url('assets/dr umar.jfif') center/cover no-repeat;"></div>
+          <div class="team-card-body">
+            <h4>Dr. Umar Liaqat</h4>
+            <div class="role">Lead Dentist & Founder</div>
+            <p>BDS, RDS · Implants · RCT · Smile Restoration</p>
+          </div>
+        </div>
+        <div class="team-card fade-in">
+          <div class="team-card-img" style="background:url('assets/dr sarah.jfif') center/cover no-repeat;"></div>
+          <div class="team-card-body">
+            <h4>Dr. Sarah Ahmed</h4>
+            <div class="role">Associate Dentist</div>
+            <p>Orthodontics · Pediatric Dentistry</p>
+          </div>
+        </div>
+        <div class="team-card fade-in">
+          <div class="team-card-img" style="background:url('assets/nurse hina baig.jfif') center/cover no-repeat;"></div>
+          <div class="team-card-body">
+            <h4>Nurse Hina Baig</h4>
+            <div class="role">Senior Dental Assistant</div>
+            <p>Patient Care & Hygiene Lead</p>
+          </div>
+        </div>
+        <div class="team-card fade-in">
+          <div class="team-card-img" style="background:url('assets/receptionalist team.jpg') center/cover no-repeat;"></div>
+          <div class="team-card-body">
+            <h4>Reception & Support Team</h4>
+            <div class="role">Patient Coordinators</div>
+            <p>Appointments, Guidance & Support</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ——— 3RD SECTION: OUR STORY ——— -->
+  <section class="section" id="story" style="padding: 80px 0;">
+    <div class="container">
+      <div class="about-intro-grid">
+        <div class="fade-in-left">
+          <span class="section-label">Our Story</span>
+          <h2 class="section-title">Where It All Began</h2>
+          <p style="margin-bottom:16px;">
+            Dental House was founded with a single mission: to make high-quality dental care accessible, comfortable, and truly painless for the people of Lahore. Born from Dr. Umar Liaqat's passion for transforming smiles and his dedication to patient welfare, Dental House was designed to be welcoming from the ground up.
+          </p>
+          <p style="margin-bottom:16px;">
+            Located on the first floor of Bilal Arcade in Johar Town, our clinic was built as a modern sanctuary — a place where patients feel respected, informed, and completely at ease. We invested in state-of-the-art equipment, rigorous sterilization standards, and a team trained in modern dentistry.
+          </p>
+          <p>
+            Today, with a 5.0-star Google rating and over 145 glowing reviews, Dental House stands as one of Lahore's most trusted dental practices. But we remain as devoted as ever to every patient who walks through our door.
+          </p>
+        </div>
+        <div class="fade-in-right">
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="year">FOUNDED</div>
+              <h4>Dental House Opens</h4>
+              <p>Dr. Umar Liaqat opens Dental House in Johar Town with a vision of painless, patient-centered dental care.</p>
+            </div>
+            <div class="timeline-item">
+              <div class="year">EXPANSION</div>
+              <h4>New Services Added</h4>
+              <p>Introduced advanced implant systems, cosmetic dentistry, and skin & hair care services.</p>
+            </div>
+            <div class="timeline-item">
+              <div class="year">RECOGNITION</div>
+              <h4>5.0★ Google Rating Achieved</h4>
+              <p>Patients consistently vote Dental House as the best dental clinic in Johar Town, Lahore.</p>
+            </div>
+            <div class="timeline-item">
+              <div class="year">TODAY</div>
+              <h4>145+ Reviews & Growing</h4>
+              <p>Over 1,500 smiles transformed and counting. We remain committed to excellence in every procedure.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT STRIP -->
+  <section class="contact-strip">
+    <div class="container">
+      <div class="contact-strip-inner">
+        <div>
+          <h2 style="font-size:clamp(1.6rem,3vw,2.2rem);">Ready to Experience the Dental House Difference?</h2>
+          <p>Join 1,500+ patients who trust us with their smiles.</p>
+        </div>
+        <div class="contact-strip-btns">
+          <a href="https://wa.me/923454114240" target="_blank" class="btn btn-whatsapp" id="about-strip-wa">
+            <i class="fa-brands fa-whatsapp"></i> WhatsApp Us
+          </a>
+          <a href="tel:+923454114240" class="btn btn-white" id="about-strip-call">
+            <i class="fa-solid fa-phone"></i> +92 345 4114240
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <div class="nav-logo-icon"><i class="fa-solid fa-tooth"></i></div>
+            <div>
+              <div class="nav-logo-text">Dental <span>House</span></div>
+              <span class="nav-logo-sub">Dr. Umar Liaqat · Lahore</span>
+            </div>
+          </a>
+          <p>Painless, professional dental care in the heart of Johar Town, Lahore. Your smile is our highest priority.</p>
+          <div class="footer-social">
+            <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://wa.me/923454114240" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Dental Services</a></li>
+            <li><a href="work.html">Case Portfolio</a></li>
+            <li><a href="office.html">Our Location</a></li>
+            <li><a href="testimonials.html">Patient Reviews</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services.html">Dental Implants</a></li>
+            <li><a href="services.html">Smile Makeovers</a></li>
+            <li><a href="services.html">Root Canal Treatment</a></li>
+            <li><a href="services.html">Teeth Cleaning</a></li>
+            <li><a href="services.html">Cosmetic Dentistry</a></li>
+            <li><a href="services.html">Teeth Whitening</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Clinic Hours</h4>
+          <div class="footer-hours-row"><span>Mon - Sat:</span> <span>11:00 AM - 11:30 PM</span></div>
+          <div class="footer-hours-row"><span>Sunday:</span> <span>7:00 PM - 11:00 PM</span></div>
+
+          <div style="margin-top: 24px;">
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-location-dot icon"></i>
+              <span>1st Floor, Bilal Arcade, Opp. Choueifat School, Block G-1, Johar Town, Lahore 54000</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-phone icon"></i>
+              <span>+92 345 4114240</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom footer-bottom-split">
+        <div>© 2026 Dental House. All Rights Reserved.</div>
+        <p class="footer-credit"><span class="dot"></span> Built by <a href="https://fazi-awan-portfolio.vercel.app/" target="_blank" rel="noopener">Fazi Awan <i class="fa-solid fa-arrow-up-right-from-square"></i></a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="shared.js"></script>
+</body>
+</html>
